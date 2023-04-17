@@ -147,7 +147,7 @@ public class PacienteServlet extends HttpServlet {
 		
 		pacienteDAO.delete(id);
 		
-		response.sendRedirect("list");
+		response.sendRedirect("listar");
 		
 	}
 	
