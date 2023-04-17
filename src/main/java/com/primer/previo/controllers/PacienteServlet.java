@@ -117,7 +117,7 @@ public class PacienteServlet extends HttpServlet {
 		String apellido = request.getParameter("apellido");
 		String email = request.getParameter("email");
 		String genero = request.getParameter("genero");;
-		Date fechaNac = Date.valueOf(request.getParameter("fechanacimiento"));
+		Date fechaNac = Date.valueOf(request.getParameter("fechaNacimiento"));
 		String telefono = request.getParameter("telefono");
 		String direcion = request.getParameter("direccion");
 		float peso = Float.parseFloat(request.getParameter("peso"));
