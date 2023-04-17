@@ -10,7 +10,7 @@
 	<header>
             <nav class="navbar navbar-expand-md navbar-dark" style="background-color: blue;">
                 <div>
-                    <a href="#" class="navbar-brand"> Indice de Masa Corporal Pacientes</a>
+                    <a href="#" class="navbar-brand"> Indice de Masa Corporal de los Pacientes</a>
                 </div>
 
                 <ul class="navbar-nav">

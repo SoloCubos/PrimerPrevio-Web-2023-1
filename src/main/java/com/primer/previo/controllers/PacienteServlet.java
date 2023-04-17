@@ -29,7 +29,6 @@ public class PacienteServlet extends HttpServlet {
      * @see HttpServlet#HttpServlet()
      */
     public PacienteServlet() {
-        super();
         // TODO Auto-generated constructor stub
     }
 
@@ -45,6 +44,7 @@ public class PacienteServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String accion = request.getServletPath();
+		System.out.println(accion);
 		try {
 			switch (accion) {
 				case "/nuevo": 
