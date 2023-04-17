@@ -87,6 +87,7 @@ public class PacienteDAO {
 			ResultSet rs = conexion.query();
 			
 			while(rs.next()) {
+				
 				int id = rs.getInt("id");
 				String documento = rs.getString("documento");
 				String nombre = rs.getString("nombre");
@@ -99,7 +100,11 @@ public class PacienteDAO {
 				float peso = rs.getFloat("peso");
 				float estatura = rs.getFloat("estatura");
 				
-				pacientes.add(new Paciente(id, documento, nombre, apellido, email, genero, fechaNac, telefono, direcion, peso, estatura));
+				Paciente paciente = new Paciente(null, documento, nombre, apellido, email, genero, fechaNac, telefono, direcion, peso, estatura);
+				
+				paciente.calcularIMC();
+				
+				pacientes.add(paciente);
 			}
 		}catch (SQLException e) {
 			// TODO: handle exception
@@ -127,7 +132,10 @@ public class PacienteDAO {
 				float peso = rs.getFloat("peso");
 				float estatura = rs.getFloat("estatura");
 				
+				paciente.calcularIMC();
+				
 				paciente = new Paciente(documento, nombre, apellido, email, genero, fechaNac, telefono, direcion, peso, estatura);
+				
 			}
 		}catch (SQLException e) {
 			// TODO: handle exception
